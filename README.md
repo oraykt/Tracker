@@ -1,4 +1,5 @@
 # Tracker APP
+<b>This is the finance tracker app from the Complete Ruby on Rails Developer course</b>
 
 Need fast development, styling not of utmost importance but needs to look presentable. <br />
 No test framework required at this time since I am building a prototype fast to display at an investors gathering. <br/>
