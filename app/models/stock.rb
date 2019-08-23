@@ -14,6 +14,12 @@ class Stock < ApplicationRecord
       looked_up_stock = client.quote(ticker_symbol)
       new(name: looked_up_stock.company_name,
           ticker: looked_up_stock.symbol, last_price: looked_up_stock.latest_price)
+      # on JSON like that
+      # {
+      #     name: looked_up_stock.company_name,
+      #     ticker: looked_up_stock.symbol,
+      #     last_price: looked_up_stock.latest_price
+      # }
     rescue Exception => e
       return nil
     end
