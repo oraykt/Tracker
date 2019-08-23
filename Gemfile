@@ -6,10 +6,19 @@ ruby '2.5.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
+# https://github.com/plataformatec/deviseb
 gem 'devise'
+# https://github.com/seyhunak/twitter-bootstrap-rails
 gem 'twitter-bootstrap-rails'
+# https://github.com/hisea/devise-bootstrap-views
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
+# https://github.com/dblock/iex-ruby-client
+gem 'iex-ruby-client'
+# https://github.com/tyrauber/stock_quote
+gem 'stock_quote'
+# https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

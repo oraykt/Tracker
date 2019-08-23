@@ -18,3 +18,4 @@ What's important is the core functionality, time and presentation.
 7. Must be mobile friendly, so the styling has to be responsive
 
 
+![](https://i.imgur.com/WeeOkig.png)
