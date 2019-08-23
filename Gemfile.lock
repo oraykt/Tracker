@@ -76,10 +76,10 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    devise (4.6.2)
+    devise (4.7.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 6.0)
+      railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
     devise-bootstrap-views (1.1.0)
@@ -267,6 +267,7 @@ DEPENDENCIES
   iex-ruby-client
   jbuilder (~> 2.5)
   jquery-rails
+  nokogiri (>= 1.10.4)
   pg
   puma (~> 3.11)
   rails (~> 5.2.3)
