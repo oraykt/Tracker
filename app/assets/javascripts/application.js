@@ -17,9 +17,13 @@
 //= require turbolinks
 //= require_tree .
 
-// $(document).ready(function(){
+$(document).ready(function(){
 //     $('#stock-lookup-form').on('ajax:success', function(event){
 //         [data, status, xhr] = event.detail;
 //         $('#result').html(xhr.responseText)
 //     })
-// })
+//     $('#stock-lookup-form').on('ajax:send', function (event) {
+//         $()
+//     })
+})
+

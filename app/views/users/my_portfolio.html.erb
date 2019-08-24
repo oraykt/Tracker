@@ -1,5 +1,5 @@
 <h2 class="text-center">Search for Stocks</h2>
-<div id="stock-lookup">
+<div id="stock-lookup" >
   <%= form_tag search_stocks_path, remote:true, method: :get, id: 'stock-lookup-form' do %>
     <div class="form-group row no-padding text-center col-md-12">
       <div class="col-md-9">
@@ -7,7 +7,7 @@
                            autofocus: true, class: 'form-control search-box input-lg'%>
       </div>
       <div class="col-md-1">
-        <%= button_tag(type: :submit, class: 'btn btn-lg btn-success') do %>
+        <%= button_tag(type: :submit, class: 'btn btn-lg btn-success', id: 'stocks_submit_btn') do %>
           <i class="fa fa-search"></i> Look up a stock
         <% end %>
       </div>
