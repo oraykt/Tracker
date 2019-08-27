@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
   def full_name
-    return "#{first_name} #{last_name}".strip if (first_name || last_name)
+    return "#{first_name} #{last_name}".strip if (!first_name.blank? || !last_name.blank?)
     "Anonymous"
   end
 
@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def under_stock_limit?
-    (user_stocks.count < 10)
+    (user_stocks.count < 1)
   end
 
   def can_add_stock?(ticker_symbol)
@@ -59,5 +59,8 @@ class User < ApplicationRecord
     users.reject { |user| user.id == self.id }
   end
 
+  def not_friend_with?(friend_id)
+    friendships.where(friend_id: friend_id).count < 1
+  end
 
 end
