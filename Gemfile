@@ -6,6 +6,22 @@ ruby '2.5.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
+# https://github.com/plataformatec/deviseb
+gem 'devise'
+# https://github.com/seyhunak/twitter-bootstrap-rails
+gem 'twitter-bootstrap-rails'
+# https://github.com/hisea/devise-bootstrap-views
+gem 'devise-bootstrap-views'
+gem 'jquery-rails'
+# https://github.com/dblock/iex-ruby-client
+gem 'iex-ruby-client'
+# https://github.com/tyrauber/stock_quote
+gem 'stock_quote'
+# https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"
+
+gem 'hirb'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -30,6 +46,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# gem "nokogiri", ">= 1.10.4"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

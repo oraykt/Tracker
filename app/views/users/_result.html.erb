@@ -1,0 +1,24 @@
+<% if params[:action] == 'search' %>
+  <div class="result-block">
+    <%= bootstrap_flash %>
+  </div>
+<% end %>
+
+<% if @stock %>
+  <div class="well result-block">
+    <strong>Symbol: </strong><%= @stock.ticker %>
+    <strong>Company Name: </strong><%= @stock.name %>
+    <strong>Price: </strong><%= @stock.last_price %>
+    <% if current_user.can_add_stock?(@stock.ticker) %>
+      <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, user_stocks_path(user:current_user, stock_ticker: @stock.ticker),class:('btn btn-xs btn-success'), style: 'margin-left: 8px;', method: :post %>
+    <% else %>
+      <% if !current_user.under_stock_limit? %>
+        <span class="label label-warning"><i class="fa fa-minus-circle" style="color:red !important;"></i> You have 10 stocks limit</span>
+  <% else %>
+        <span class="label label-info"> <i class="fa fa-check-circle" style="color: green !important;"></i> You have already added this stock</span>
+      <% end %>
+
+    <% end %>
+  </div>
+
+<% end %>
