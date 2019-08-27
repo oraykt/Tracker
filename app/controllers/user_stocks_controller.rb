@@ -8,6 +8,7 @@ class UserStocksController < ApplicationController
     end
     @user_stock = UserStock.create(user: current_user, stock: stock)
     flash[:success] = "Stock #{@user_stock.stock.name} was successfully added to portfolio"
+    # TODO  Create action will work without redirect (single page app)
     redirect_to my_portfolio_path
   end
 end

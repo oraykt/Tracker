@@ -9,7 +9,16 @@
     <strong>Symbol: </strong><%= @stock.ticker %>
     <strong>Company Name: </strong><%= @stock.name %>
     <strong>Price: </strong><%= @stock.last_price %>
-    <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, user_stocks_path(user:current_user, stock_ticker: @stock.ticker),class:('btn btn-xs btn-success'), style: 'margin-left: 8px;', method: :post %>
+    <% if current_user.can_add_stock?(@stock.ticker) %>
+      <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, user_stocks_path(user:current_user, stock_ticker: @stock.ticker),class:('btn btn-xs btn-success'), style: 'margin-left: 8px;', method: :post %>
+    <% else %>
+      <% if !current_user.under_stock_limit? %>
+        <button class="btn btn-xs btn-info" style="margin-left: 8px;" title="You have 3 stocks limit" ><i class="fa fa-plus-circle"></i></button>
+  <% else %>
+          <button class="btn btn-xs btn-success" style="margin-left: 8px;" title="You have already added this stock" ><i class="fa fa-check-circle"></i></button>
+      <% end %>
+
+    <% end %>
   </div>
 
 <% end %>
