@@ -11,4 +11,12 @@ class UserStocksController < ApplicationController
     # TODO  Create action will work without redirect (single page app)
     redirect_to my_portfolio_path
   end
+
+  def destroy
+    stock = Stock.find(params[:id])
+    @user_stock = UserStock.where(user_id: current_user.id, stock_id: stock.id).first
+    @user_stock.destroy
+    flash[:notice] = "Stock was successully removed from portfolio"
+    redirect_to my_portfolio_path
+  end
 end

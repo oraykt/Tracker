@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   # resources: Index, new, create, show, edit, update, destroy
   # resource: new, create, show, edit, update, destroy
-  resources :user_stocks, only: [:create]
+  resources :user_stocks, only: [:create, :destroy]
 
 end
