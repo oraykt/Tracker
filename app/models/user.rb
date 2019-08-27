@@ -54,5 +54,10 @@ class User < ApplicationRecord
     User.where("#{field_name} like ?", "%#{param}%")
   end
 
+  def except_current_user(users)
+    #  this will remove the current user
+    users.reject { |user| user.id == self.id }
+  end
+
 
 end
