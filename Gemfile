@@ -20,6 +20,8 @@ gem 'stock_quote'
 # https://github.com/bokmann/font-awesome-rails
 gem "font-awesome-rails"
 
+gem 'hirb'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
