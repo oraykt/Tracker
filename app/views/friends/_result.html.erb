@@ -27,11 +27,11 @@
                 <strong>
                   Profile:
                 </strong>
-                <%= link_to "View Profile", "#", class: "btn btn-xs btn-info" %>
+                <%= link_to 'View Profile', user_path(user  ), class: 'btn btn-info btn-xs' %>
                 <% if current_user.not_friend_with?(user.id) %>
                   <%= link_to "Add as my friend", add_friend_path(user: current_user, friend: user), class: 'btn btn-xs btn-success', method: :post %>
                 <% else %>
-                  <span class="label label-primary">You are already friends</span>
+                  <span class="label label-warning">You are already friends</span>
               <% end %>
               </td>
             </tr>
